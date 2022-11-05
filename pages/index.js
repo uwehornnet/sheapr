@@ -119,8 +119,9 @@ export default function Home() {
 							Mit deiner Solaranlage kannst du die Energie der Sonne nutzen
 						</h2>
 						<p>
-							Mit den steckerfertigen Solaranlagen kannst du die Energie der Sonne in Strom umwandeln und
-							diesen für den Einsatz auf deinem Balkon, Dach oder in deinem Garten nutzen.
+							Mit den steckerfertigen Solaranlagen für deinen Balkon kannst du die Energie der Sonne in
+							Strom umwandeln und diesen für den Einsatz in deiner Wohnung oder deinem Haus oder in deinem
+							Garten nutzen.
 						</p>
 					</div>
 					<div className="col-span-1 flex items-center justify-center px-8">
