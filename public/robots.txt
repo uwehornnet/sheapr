@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Disallow: /404
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://your-rims.com/
+
+# Sitemaps
+Sitemap: https://your-rims.com/sitemap.xml
+Sitemap: https://your-rims.com/server-sitemap.xml

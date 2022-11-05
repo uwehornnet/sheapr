@@ -1,0 +1,30 @@
+{
+	"name": "preisvergleicher",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"postbuild": "next-sitemap",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.12",
+		"cookies-next": "^2.1.1",
+		"ebay-api": "^7.0.2",
+		"ebay-node-api": "^2.9.0",
+		"gsap": "^3.11.3",
+		"next": "13.0.0",
+		"playwright": "^1.27.1",
+		"postcss": "^8.4.18",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"tailwindcss": "^3.2.1"
+	},
+	"devDependencies": {
+		"eslint": "8.26.0",
+		"eslint-config-next": "13.0.0",
+		"next-sitemap": "^3.1.29"
+	}
+}
