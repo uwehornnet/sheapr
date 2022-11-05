@@ -129,35 +129,35 @@ export default function Header() {
 									<h3>Solaranlagen</h3>
 									<div className="grid grid-cols-3 gap-4 mt-8">
 										<div className="rounded-xl bg-zinc-100 p-4">
-											<img
-												src="/images/solaranlage-balkon.jpg"
-												alt="Solaranlagen für deinen Balkon"
-												className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
-											/>
-
 											<Link href="/solaranlage/balkon">
+												<img
+													src="/images/solaranlage-balkon.jpg"
+													alt="Solaranlagen für deinen Balkon"
+													className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
+												/>
+
 												<span className="text-sm">für den Balkon</span>
 											</Link>
 										</div>
 										<div className="rounded-xl bg-zinc-100 p-4">
-											<img
-												src="/images/solaranlage-dach.jpg"
-												alt="Solaranlagen für deine Dach"
-												className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
-											/>
-
 											<Link href="/solaranlage/dach">
+												<img
+													src="/images/solaranlage-dach.jpg"
+													alt="Solaranlagen für deine Dach"
+													className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
+												/>
+
 												<span className="text-sm">fürs Dach</span>
 											</Link>
 										</div>
 										<div className="rounded-xl bg-zinc-100 p-4">
-											<img
-												src="/images/solar-unterwegs.jpg"
-												alt="Solaranlage für unterwegs oder zum campen"
-												className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
-											/>
+											<Link href="/solaranlage/unterwegs">
+												<img
+													src="/images/solar-unterwegs.jpg"
+													alt="Solaranlage für unterwegs oder zum campen"
+													className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
+												/>
 
-											<Link href="/solaranlage/unterwegs.jpg">
 												<span className="text-sm">für Unterwegs</span>
 											</Link>
 										</div>
