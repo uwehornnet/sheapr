@@ -1,4 +1,4 @@
-const siteUrl = "https://your-rims.com/";
+const siteUrl = "https://solarchecks.de/";
 module.exports = {
 	siteUrl,
 	exclude: ["/404"],

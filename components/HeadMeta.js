@@ -24,7 +24,7 @@ export default function HeadMeta({ title, description, image }) {
 			<meta name="twitter:card" content="summary_large_image" />
 
 			<meta property="og:description" content={description} />
-			<meta property="og:site_name" content="your-rims.com" />
+			<meta property="og:site_name" content="solarchecks.de" />
 
 			<link rel="stylesheet" src="/fonts.css" />
 
