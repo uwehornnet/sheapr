@@ -29,7 +29,7 @@ export default function Home() {
 	return (
 		<div className="bg-white w-full min-h-screen">
 			<HeadMeta
-				title="Solaranlage für den Balkon: eine kluge Entscheidung für die Zukunft"
+				title="Solaranlage für den Balkon: eine kluge Entscheidung"
 				description="Solaranlage für den Balkon: ✓ Einfache und schnelle Montage ✓ Ideal für die Nutzung von Solarenergie ✓ Für eine grüne und umweltbewusste Zukunft."
 			/>
 
