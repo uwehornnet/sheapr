@@ -29,8 +29,8 @@ export default function Home() {
 	return (
 		<div className="bg-white w-full min-h-screen">
 			<HeadMeta
-				title="Preisvergleich von +1000 Original Felgen. Jetzt sparen!"
-				description="Preisvergleich Original Felgen +1000 Angeboten | Finde die besten Angebote und spare bares Geld bei deinem nächsten Kauf | Jetzt vergleichen"
+				title="Solaranlage für den Balkon: eine kluge Entscheidung für die Zukunft"
+				description="Solaranlage für den Balkon: ✓ Einfache und schnelle Montage ✓ Ideal für die Nutzung von Solarenergie ✓ Für eine grüne und umweltbewusste Zukunft."
 			/>
 
 			<div className="relative min-h-screen md:min-h-0 md:aspect-square lg:aspect-header">
