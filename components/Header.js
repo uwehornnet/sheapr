@@ -157,7 +157,7 @@ export default function Header() {
 												className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
 											/>
 
-											<Link href="/solaranlage/unterwegs">
+											<Link href="/solaranlage/unterwegs.jpg">
 												<span className="text-sm">für Unterwegs</span>
 											</Link>
 										</div>
