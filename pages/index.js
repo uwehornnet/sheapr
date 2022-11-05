@@ -35,13 +35,15 @@ export default function Home() {
 
 			<div className="relative min-h-screen md:min-h-0 md:aspect-square lg:aspect-header">
 				<img
+					alt="Solaranlage für den Balkon eine kluge Entscheidung für die Zukunft"
 					src="/images/header.jpg"
 					className="w-full h-full object-cover md:aspect-auto min-h-screen md:min-h-0"
 				/>
 				<div className="absolute h-full w-full top-0 left-0 bg-gradient-to-b from-transparent to-black/50"></div>
 				<div className="absolute h-full w-full top-0 left-0 flex flex-col justify-end p-8">
 					<h1 className="text-white text-biggest text-center max-w-[900px] mx-auto mb-16 font-semibold">
-						Die perfekte Alternative zur herkömmlichen Energieversorgung
+						Solaranlage für den Balkon – <br />
+						eine kluge Entscheidung für die Zukunft
 					</h1>
 					<div className="max-w-[1024px] mx-auto bg-zinc-200/50 grid grid-cols-1 lg:grid-cols-3 p-4 gap-8 rounded-2xl backdrop-blur-lg">
 						<div className="flex gap-4 items-center">
@@ -124,7 +126,7 @@ export default function Home() {
 					<div className="col-span-1 flex items-center justify-center px-8">
 						<img
 							src="/images/kollektor.jpg"
-							alt=""
+							alt="Mit deiner Solaranlage kannst du die Energie der Sonne nutzen"
 							className="aspect-square w-full object-cover max-w-[400px] rounded-2xl"
 						/>
 					</div>
@@ -157,7 +159,7 @@ export default function Home() {
 					<div className="col-span-1 flex items-center justify-center order-2 md:order-1 px-8">
 						<img
 							src="/images/steckdose.jpg"
-							alt=""
+							alt="Vom Balkon aus kann der Strom direkt in die Steckdose gelangen"
 							className="aspect-square w-full object-cover max-w-[400px] rounded-2xl"
 						/>
 					</div>
@@ -194,7 +196,7 @@ export default function Home() {
 					<div className="col-span-1 flex items-center justify-center px-8">
 						<img
 							src="/images/geraete.jpg"
-							alt=""
+							alt="Steigere deine Energiewirtschaftlichkeit, indem du deinen eigenen Solarstrom bei Dir zu Hause nutzt"
 							className="aspect-square w-full object-cover max-w-[400px] rounded-2xl"
 						/>
 					</div>
@@ -204,14 +206,14 @@ export default function Home() {
 			<div className="w-full relative aspect-auto md:aspect-video">
 				<img
 					src="/images/banner.jpg"
-					alt=""
+					alt="Solaranlage für Unterwegs oder zum Campen"
 					className="w-full md:h-full relative md:absolute top-0 left-0 object-cover aspect-video md:aspect-auto"
 				/>
 				<div className="container mx-auto relative h-full flex items-center justify-end">
 					<div className="rounded-2xl p-8 md:p-16 max-w-[640px] bg-white relative">
 						<small className="block text-camo font-semibold mb-2">Für Unterwegs</small>
 						<h2 className="text-medium mb-8 font-semibold">
-							Solaranlage für Unterwegs oder zum Campen <br /> – Preise vergleichen und profitieren{" "}
+							Solaranlage für Unterwegs oder zum Campen <br /> – Preise vergleichen und profitieren
 						</h2>
 						<p>
 							Flexible Solarpanele sind eine großartige Möglichkeit, um unterwegs Strom zu erzeugen. Sie
