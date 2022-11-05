@@ -44,7 +44,7 @@ export default function Header() {
 				<div className="bg-white w-full max-w-[400px] h-full ml-auto mr-0 pt-8 overflow-y-scroll">
 					<div className="flex items-center justify-end mb-16 gap-2 cursor-pointer pr-8" onClick={hideNav}>
 						<div className="flex items-center bg-neon text-camo py-3 px-6 rounded-full">
-							<span className="text-base">schliessen</span>
+							<span className="text-base">schließen</span>
 							<span className=" p-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
