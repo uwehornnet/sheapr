@@ -130,8 +130,8 @@ export default function Header() {
 									<div className="grid grid-cols-3 gap-4 mt-8">
 										<div className="rounded-xl bg-zinc-100 p-4">
 											<img
-												src="/images/header.jpg"
-												alt=""
+												src="/images/solaranlage-balkon.jpg"
+												alt="Solaranlagen für deinen Balkon"
 												className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
 											/>
 
@@ -141,8 +141,8 @@ export default function Header() {
 										</div>
 										<div className="rounded-xl bg-zinc-100 p-4">
 											<img
-												src="/images/header.jpg"
-												alt=""
+												src="/images/solaranlage-dach.jpg"
+												alt="Solaranlagen für deine Dach"
 												className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
 											/>
 
@@ -152,8 +152,8 @@ export default function Header() {
 										</div>
 										<div className="rounded-xl bg-zinc-100 p-4">
 											<img
-												src="/images/header.jpg"
-												alt=""
+												src="/images/solaranlage-unterwegs.jpg"
+												alt="Solaranlage für unterwegs oder zum campen"
 												className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
 											/>
 
