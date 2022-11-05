@@ -19,16 +19,12 @@ export default function HeadMeta({ title, description, image }) {
 			<meta property="og:title" content={title} />
 			<meta property="og:type" content="article" />
 			{image ? <meta property="og:image" content={image} /> : null}
-
 			<meta property="og:url" content={URL} />
 			<meta name="twitter:card" content="summary_large_image" />
-
 			<meta property="og:description" content={description} />
 			<meta property="og:site_name" content="solarchecks.de" />
-
 			<link rel="stylesheet" src="/fonts.css" />
-
-			<meta name="google-site-verification" content="9LR7Qb7AnPu-LoitlxhfQ7nyCsYJ8SqUnGhuCpJndYo" />
+			<meta name="google-site-verification" content="tve7tIaRCv3y81Tr0cAvb-4l__wSL3XYgt7WvK3Ybzs" />
 		</Head>
 	);
 }
