@@ -42,11 +42,11 @@
 	}
 
 	.text-bigger {
-		font-size: clamp(1.2rem, 2.8vw, 4rem);
+		font-size: clamp(1.6rem, 2.8vw, 4rem);
 	}
 
 	.text-big {
-		font-size: clamp(1.2rem, 2vw, 2rem);
+		font-size: clamp(1.6rem, 2vw, 2rem);
 	}
 
 	.text-medium {

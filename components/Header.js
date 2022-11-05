@@ -176,7 +176,7 @@ export default function Header() {
 						</li>
 
 						<li>
-							<Link href="/" className="hover:underline hover:underline-offset-2 hover:text-neon">
+							<Link href="/faq" className="hover:underline hover:underline-offset-2 hover:text-neon">
 								<span>FAQ</span>
 							</Link>
 						</li>

@@ -4,19 +4,24 @@ import HeadMeta from "../components/HeadMeta";
 
 const FAQ_DATA = [
 	{
-		title: "Wie funktioniert die Solaranlage",
+		title: "Solarstrom – was ist das? ",
+		content:
+			"Solarstrom ist elektrische Energie, die aus der Kraft der Sonne gewonnen wird. Durch die Nutzung von Solarstrom können Haushalte und Unternehmen ihren Strombedarf zu einem großen Teil selbst decken und so von den teuren Netzentgelten befreien. Auch für die Umwelt ist die Stromerzeugung aus Solarenergie sinnvoll, da sie keine schädlichen Emissionen verursacht.",
+	},
+	{
+		title: "Wie funktioniert eine Solaranlage?",
 		content:
 			"Die meisten Solaranlagen bestehen aus einer Vielzahl von solarbetriebenen Modulen, die an einem Rahmen befestigt sind. Die Module wandeln die Sonnenenergie in elektrische Energie um, die dann in einem Wechselrichter in eine nutzbare Form gebracht wird. Der Wechselrichter ist mit dem Stromnetz des Hauses oder der Firma verbunden und sorgt so dafür, dass der erzeugte Strom ins Netz eingespeist werden kann.",
 	},
 	{
-		title: "Wie funktioniert die Solaranlage",
+		title: "Was sind Vorteile von Solarstrom?",
 		content:
-			"Die meisten Solaranlagen bestehen aus einer Vielzahl von solarbetriebenen Modulen, die an einem Rahmen befestigt sind. Die Module wandeln die Sonnenenergie in elektrische Energie um, die dann in einem Wechselrichter in eine nutzbare Form gebracht wird. Der Wechselrichter ist mit dem Stromnetz des Hauses oder der Firma verbunden und sorgt so dafür, dass der erzeugte Strom ins Netz eingespeist werden kann.",
+			"Solarstrom bietet viele Vorteile gegenüber herkömmlicher Stromerzeugung aus fossiler Brennstoffe: Solaranlagen sind emissionsfrei, geräuscharm und wartungsarm. Außerdem können sie überall dort installiert werden, wo Sonne scheint – selbst auf dem Balkon oder der Terrasse. Und dank der steigenden Effizienz von Solarstromanlagen lohnt sich die Investition in eine Anlage heute mehr denn je.",
 	},
 	{
-		title: "Wie funktioniert die Solaranlage",
+		title: "Was sind Nachteile von Solarstrom?",
 		content:
-			"Die meisten Solaranlagen bestehen aus einer Vielzahl von solarbetriebenen Modulen, die an einem Rahmen befestigt sind. Die Module wandeln die Sonnenenergie in elektrische Energie um, die dann in einem Wechselrichter in eine nutzbare Form gebracht wird. Der Wechselrichter ist mit dem Stromnetz des Hauses oder der Firma verbunden und sorgt so dafür, dass der erzeugte Strom ins Netz eingespeist werden kann.",
+			"Solarstrom ist zwar eine großartige Alternative zur herkömmlichen Energieversorgung, aber es gibt auch einige Nachteile, die berücksichtigt werden sollten, bevor man sich für eine Solaranlage entscheidet. Zum einen ist Solarstrom nicht unbegrenzt verfügbar – er ist abhängig von der Sonneneinstrahlung, und an bewölkten oder regnerischen Tagen wird weniger Strom erzeugt. Zum anderen sind Solaranlagen relativ teuer in der Anschaffung und müssen regelmäßig gewartet werden. Auch die Batterien, die den Strom speichern, müssen irgendwann ausgetauscht werden.",
 	},
 ];
 
@@ -28,11 +33,14 @@ export default function Home() {
 				description="Preisvergleich Original Felgen +1000 Angeboten | Finde die besten Angebote und spare bares Geld bei deinem nächsten Kauf | Jetzt vergleichen"
 			/>
 
-			<div className="relative aspect-portrait md:aspect-square lg:aspect-header">
-				<img src="/images/header.jpg" className="w-full h-full object-cover aspect-portrait md:aspect-auto" />
+			<div className="relative min-h-screen md:min-h-0 md:aspect-square lg:aspect-header">
+				<img
+					src="/images/header.jpg"
+					className="w-full h-full object-cover md:aspect-auto min-h-screen md:min-h-0"
+				/>
 				<div className="absolute h-full w-full top-0 left-0 bg-gradient-to-b from-transparent to-black/50"></div>
 				<div className="absolute h-full w-full top-0 left-0 flex flex-col justify-end p-8">
-					<h1 className="text-white text-biggest text-center max-w-[900px] mx-auto mb-16">
+					<h1 className="text-white text-biggest text-center max-w-[900px] mx-auto mb-16 font-semibold">
 						Die perfekte Alternative zur herkömmlichen Energieversorgung
 					</h1>
 					<div className="max-w-[1024px] mx-auto bg-zinc-200/50 grid grid-cols-1 lg:grid-cols-3 p-4 gap-8 rounded-2xl backdrop-blur-lg">
@@ -103,24 +111,21 @@ export default function Home() {
 			</div>
 
 			<div className="w-full bg-petrolish py-16">
-				<div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 py-16">
+				<div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 py-16 items-center">
 					<div className="col-span-1 px-8">
-						<h2 className="text-big mb-8">
-							Solaranlage für den Balkon – Preise vergleichen und profitieren{" "}
+						<h2 className="text-big mb-8 font-semibold">
+							Mit deiner Solaranlage kannst du die Energie der Sonne nutzen
 						</h2>
 						<p>
-							Wenn Sie sich für eine Solaranlage für Ihren Balkon entscheiden, sollten Sie zunächst
-							verschiedene Modelle und Preise vergleichen. Denn nur so können Sie die beste Anlage zu
-							einem günstigen Preis erwerben. Auf dieser Seite finden Sie einen Preisvergleich
-							verschiedener Solaranlagen für den Balkon. So können Sie schnell und einfach die beste
-							Anlage zum günstigsten Preis erwerben.
+							Mit den steckerfertigen Solaranlagen kannst du die Energie der Sonne in Strom umwandeln und
+							diesen für den Einsatz auf deinem Balkon, Dach oder in deinem Garten nutzen.
 						</p>
 					</div>
-					<div className="col-span-1 flex items-center justify-center">
+					<div className="col-span-1 flex items-center justify-center px-8">
 						<img
-							src="/images/header.jpg"
+							src="/images/kollektor.jpg"
 							alt=""
-							className="aspect-square w-full object-cover max-w-[400px] rounded-lg"
+							className="aspect-square w-full object-cover max-w-[400px] rounded-2xl"
 						/>
 					</div>
 				</div>
@@ -142,24 +147,18 @@ export default function Home() {
 					</svg>
 				</div>
 
-				<div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 py-16">
+				<div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 py-16 items-center">
 					<div className="col-span-1 px-8 order-1 md:order-2">
-						<h2 className="text-big mb-8">
-							Solaranlage für den Balkon – Preise vergleichen und profitieren{" "}
+						<h2 className="text-big mb-8 font-semibold">
+							Vom Balkon aus kann der Strom direkt in die Steckdose gelangen
 						</h2>
-						<p>
-							Wenn Sie sich für eine Solaranlage für Ihren Balkon entscheiden, sollten Sie zunächst
-							verschiedene Modelle und Preise vergleichen. Denn nur so können Sie die beste Anlage zu
-							einem günstigen Preis erwerben. Auf dieser Seite finden Sie einen Preisvergleich
-							verschiedener Solaranlagen für den Balkon. So können Sie schnell und einfach die beste
-							Anlage zum günstigsten Preis erwerben.
-						</p>
+						<p>Der umgewandelte Wechselstrom fließt dann direkt von der Solaranlage in deine Steckdose.</p>
 					</div>
-					<div className="col-span-1 flex items-center justify-center order-2 md:order-1">
+					<div className="col-span-1 flex items-center justify-center order-2 md:order-1 px-8">
 						<img
-							src="/images/header.jpg"
+							src="/images/steckdose.jpg"
 							alt=""
-							className="aspect-square w-full object-cover max-w-[400px] rounded-lg"
+							className="aspect-square w-full object-cover max-w-[400px] rounded-2xl"
 						/>
 					</div>
 				</div>
@@ -181,24 +180,22 @@ export default function Home() {
 					</svg>
 				</div>
 
-				<div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 py-16">
+				<div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 py-16 items-center">
 					<div className="col-span-1 px-8">
-						<h2 className="text-big mb-8">
-							Solaranlage für den Balkon – Preise vergleichen und profitieren{" "}
+						<h2 className="text-big mb-8 font-semibold">
+							Steigere deine Energiewirtschaftlichkeit, indem du deinen eigenen Solarstrom bei Dir zu
+							Hause nutzt
 						</h2>
 						<p>
-							Wenn Sie sich für eine Solaranlage für Ihren Balkon entscheiden, sollten Sie zunächst
-							verschiedene Modelle und Preise vergleichen. Denn nur so können Sie die beste Anlage zu
-							einem günstigen Preis erwerben. Auf dieser Seite finden Sie einen Preisvergleich
-							verschiedener Solaranlagen für den Balkon. So können Sie schnell und einfach die beste
-							Anlage zum günstigsten Preis erwerben.
+							Der Strom gelangt in das Stromnetz deines Haushalts, sobald du ihn an die Steckdose
+							anschließt.
 						</p>
 					</div>
-					<div className="col-span-1 flex items-center justify-center">
+					<div className="col-span-1 flex items-center justify-center px-8">
 						<img
-							src="/images/header.jpg"
+							src="/images/geraete.jpg"
 							alt=""
-							className="aspect-square w-full object-cover max-w-[400px] rounded-lg"
+							className="aspect-square w-full object-cover max-w-[400px] rounded-2xl"
 						/>
 					</div>
 				</div>
@@ -211,23 +208,28 @@ export default function Home() {
 					className="w-full md:h-full relative md:absolute top-0 left-0 object-cover aspect-video md:aspect-auto"
 				/>
 				<div className="container mx-auto relative h-full flex items-center justify-end">
-					<div className="rounded-xl p-8 md:p-16 max-w-[640px] bg-white relative">
-						<small className="block text-neon">Für Unterwegs</small>
-						<h2 className="text-big mb-8">
-							Solaranlage für Unterwegs oder zum Campen – Preise vergleichen und profitieren{" "}
+					<div className="rounded-2xl p-8 md:p-16 max-w-[640px] bg-white relative">
+						<small className="block text-camo font-semibold mb-2">Für Unterwegs</small>
+						<h2 className="text-medium mb-8 font-semibold">
+							Solaranlage für Unterwegs oder zum Campen <br /> – Preise vergleichen und profitieren{" "}
 						</h2>
 						<p>
-							Wenn Sie sich für eine Solaranlage für Ihren Balkon entscheiden, sollten Sie zunächst
-							verschiedene Modelle und Preise vergleichen. Denn nur so können Sie die beste Anlage zu
-							einem günstigen Preis erwerben. Auf dieser Seite finden Sie einen Preisvergleich
-							verschiedener Solaranlagen für den Balkon. So können Sie schnell und einfach die beste
-							Anlage zum günstigsten Preis erwerben.
+							Flexible Solarpanele sind eine großartige Möglichkeit, um unterwegs Strom zu erzeugen. Sie
+							sind leicht und können an vielen verschiedenen Oberflächen befestigt werden. Dadurch eignen
+							sie sich perfekt für die Nutzung auf RVs, Booten und Wohnwagen.
 						</p>
+
+						<Link
+							href="/solaranlage/unterwegs"
+							className="inline-block px-6 py-3 rounded-full bg-neon uppercase mt-8 text-camo text-sm tracking-wider font-semibold hover:bg-camo hover:text-neon"
+						>
+							<span>Solaranlagen für unterwegs</span>
+						</Link>
 					</div>
 				</div>
 			</div>
 
-			<FAQ data={FAQ_DATA} />
+			<FAQ data={FAQ_DATA} title="Häufig gestellte Fragen" />
 		</div>
 	);
 }

@@ -35,7 +35,13 @@ const Container = ({ item }) => {
 	};
 
 	return (
-		<div className="relative w-full mb-8">
+		<div
+			className={
+				open
+					? `relative w-full mb-8 p-4 rounded-2xl bg-petrolish`
+					: `relative w-full mb-8 p-4 rounded-2xl bg-white`
+			}
+		>
 			<div className="flex items-center justify-between cursor-pointer" onClick={toggle}>
 				<h3 className="text-big">{item?.title}</h3>
 				<span ref={icon}>
@@ -58,10 +64,10 @@ const Container = ({ item }) => {
 	);
 };
 
-export default function FAQ({ data }) {
+export default function FAQ({ data, title }) {
 	return (
 		<div className="w-full py-16 px-8">
-			<h2 className="mx-auto text-center mb-16 text-bigger">Häufig gestellte Fragen</h2>
+			{title ? <h2 className="mx-auto text-center mb-16 text-bigger font-semibold">{title}</h2> : null}
 			<div className="max-w-[1024px] mx-auto">
 				{data.map((item, index) => (
 					<Container key={index} item={item} />

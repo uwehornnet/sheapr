@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import ActivityIndicator from "../../components/ActivityIndicator";
-import Modal from "../../components/Modal";
+import Link from "next/link";
 import Product from "../../components/Product";
 import FAQ from "../../components/FAQ";
 
@@ -9,19 +9,24 @@ import HeadMeta from "../../components/HeadMeta";
 
 const FAQ_DATA = [
 	{
-		title: "Wie funktioniert die Solaranlage",
+		title: "Solarstrom – was ist das? ",
+		content:
+			"Solarstrom ist elektrische Energie, die aus der Kraft der Sonne gewonnen wird. Durch die Nutzung von Solarstrom können Haushalte und Unternehmen ihren Strombedarf zu einem großen Teil selbst decken und so von den teuren Netzentgelten befreien. Auch für die Umwelt ist die Stromerzeugung aus Solarenergie sinnvoll, da sie keine schädlichen Emissionen verursacht.",
+	},
+	{
+		title: "Wie funktioniert eine Solaranlage?",
 		content:
 			"Die meisten Solaranlagen bestehen aus einer Vielzahl von solarbetriebenen Modulen, die an einem Rahmen befestigt sind. Die Module wandeln die Sonnenenergie in elektrische Energie um, die dann in einem Wechselrichter in eine nutzbare Form gebracht wird. Der Wechselrichter ist mit dem Stromnetz des Hauses oder der Firma verbunden und sorgt so dafür, dass der erzeugte Strom ins Netz eingespeist werden kann.",
 	},
 	{
-		title: "Wie funktioniert die Solaranlage",
+		title: "Was sind Vorteile von Solarstrom?",
 		content:
-			"Die meisten Solaranlagen bestehen aus einer Vielzahl von solarbetriebenen Modulen, die an einem Rahmen befestigt sind. Die Module wandeln die Sonnenenergie in elektrische Energie um, die dann in einem Wechselrichter in eine nutzbare Form gebracht wird. Der Wechselrichter ist mit dem Stromnetz des Hauses oder der Firma verbunden und sorgt so dafür, dass der erzeugte Strom ins Netz eingespeist werden kann.",
+			"Solarstrom bietet viele Vorteile gegenüber herkömmlicher Stromerzeugung aus fossiler Brennstoffe: Solaranlagen sind emissionsfrei, geräuscharm und wartungsarm. Außerdem können sie überall dort installiert werden, wo Sonne scheint – selbst auf dem Balkon oder der Terrasse. Und dank der steigenden Effizienz von Solarstromanlagen lohnt sich die Investition in eine Anlage heute mehr denn je.",
 	},
 	{
-		title: "Wie funktioniert die Solaranlage",
+		title: "Was sind Nachteile von Solarstrom?",
 		content:
-			"Die meisten Solaranlagen bestehen aus einer Vielzahl von solarbetriebenen Modulen, die an einem Rahmen befestigt sind. Die Module wandeln die Sonnenenergie in elektrische Energie um, die dann in einem Wechselrichter in eine nutzbare Form gebracht wird. Der Wechselrichter ist mit dem Stromnetz des Hauses oder der Firma verbunden und sorgt so dafür, dass der erzeugte Strom ins Netz eingespeist werden kann.",
+			"Solarstrom ist zwar eine großartige Alternative zur herkömmlichen Energieversorgung, aber es gibt auch einige Nachteile, die berücksichtigt werden sollten, bevor man sich für eine Solaranlage entscheidet. Zum einen ist Solarstrom nicht unbegrenzt verfügbar – er ist abhängig von der Sonneneinstrahlung, und an bewölkten oder regnerischen Tagen wird weniger Strom erzeugt. Zum anderen sind Solaranlagen relativ teuer in der Anschaffung und müssen regelmäßig gewartet werden. Auch die Batterien, die den Strom speichern, müssen irgendwann ausgetauscht werden.",
 	},
 ];
 
@@ -101,7 +106,10 @@ export default function Campen() {
 
 	return (
 		<div className="w-full min-h-screen">
-			<HeadMeta title="Imprint - Terms of usage" description="Imprint - Terms of usage" />
+			<HeadMeta
+				title="Die besten Solaranlagen zum Camping im Vergleich"
+				description="Solaranlage zum Camping – Eine Investition in Ihre Zukunft, die sich auszahlt. Sparen Sie bares Geld durch die Nutzung erneuerbarer Energien."
+			/>
 
 			<div className="container mx-auto py-32">
 				<h1 className="text-biggest text-center font-semibold">
@@ -142,23 +150,28 @@ export default function Campen() {
 					className="w-full md:h-full relative md:absolute top-0 left-0 object-cover aspect-video md:aspect-auto"
 				/>
 				<div className="container mx-auto relative h-full flex items-center justify-end">
-					<div className="rounded-xl p-8 md:p-16 max-w-[640px] bg-white relative">
-						<small className="block text-neon">Für Unterwegs</small>
-						<h2 className="text-big mb-8">
-							Solaranlage für Unterwegs oder zum Campen – Preise vergleichen und profitieren{" "}
+					<div className="rounded-2xl p-8 md:p-16 max-w-[640px] bg-white relative">
+						<small className="block text-camo font-semibold mb-2">Für Unterwegs</small>
+						<h2 className="text-medium mb-8 font-semibold">
+							Solaranlage für Unterwegs oder zum Campen <br /> – Preise vergleichen und profitieren{" "}
 						</h2>
 						<p>
-							Wenn Sie sich für eine Solaranlage für Ihren Balkon entscheiden, sollten Sie zunächst
-							verschiedene Modelle und Preise vergleichen. Denn nur so können Sie die beste Anlage zu
-							einem günstigen Preis erwerben. Auf dieser Seite finden Sie einen Preisvergleich
-							verschiedener Solaranlagen für den Balkon. So können Sie schnell und einfach die beste
-							Anlage zum günstigsten Preis erwerben.
+							Flexible Solarpanele sind eine großartige Möglichkeit, um unterwegs Strom zu erzeugen. Sie
+							sind leicht und können an vielen verschiedenen Oberflächen befestigt werden. Dadurch eignen
+							sie sich perfekt für die Nutzung auf RVs, Booten und Wohnwagen.
 						</p>
+
+						<Link
+							href="/solaranlage/unterwegs"
+							className="inline-block px-6 py-3 rounded-full bg-neon uppercase mt-8 text-camo text-sm tracking-wider font-semibold hover:bg-camo hover:text-neon"
+						>
+							<span>Solaranlagen für unterwegs</span>
+						</Link>
 					</div>
 				</div>
 			</div>
 
-			<FAQ data={FAQ_DATA} />
+			<FAQ data={FAQ_DATA} title="Häufig gestellte Fragen" />
 		</div>
 	);
 }

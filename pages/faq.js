@@ -1,11 +1,6 @@
-import { useEffect, useState } from "react";
-
-import ActivityIndicator from "../../../components/ActivityIndicator";
 import Link from "next/link";
-import Product from "../../../components/Product";
-import FAQ from "../../../components/FAQ";
-
-import HeadMeta from "../../../components/HeadMeta";
+import FAQ from "../components/FAQ";
+import HeadMeta from "../components/HeadMeta";
 
 const FAQ_DATA = [
 	{
@@ -28,124 +23,32 @@ const FAQ_DATA = [
 		content:
 			"Solarstrom ist zwar eine großartige Alternative zur herkömmlichen Energieversorgung, aber es gibt auch einige Nachteile, die berücksichtigt werden sollten, bevor man sich für eine Solaranlage entscheidet. Zum einen ist Solarstrom nicht unbegrenzt verfügbar – er ist abhängig von der Sonneneinstrahlung, und an bewölkten oder regnerischen Tagen wird weniger Strom erzeugt. Zum anderen sind Solaranlagen relativ teuer in der Anschaffung und müssen regelmäßig gewartet werden. Auch die Batterien, die den Strom speichern, müssen irgendwann ausgetauscht werden.",
 	},
+	{
+		title: "Solaranlage für den Balkon – was gibt es zu beachten?",
+		content:
+			"Wenn Sie sich für die Anschaffung einer Solaranlage für Ihren Balkon entscheiden, gibt es einige Punkte, die Sie beachten sollten. Zunächst einmal ist es wichtig, dass Sie sich für ein Modell entscheiden, das zu Ihren Anforderungen passt. Solaranlagen gibt es in verschiedenen Größen und Leistungsklassen. Je nachdem, wie viel Strom Sie benötigen und wie viel Platz Sie auf Ihrem Balkon haben, sollten Sie sich für ein geeignetes Modell entscheiden. Zudem ist es wichtig, dass die Solaranlage an einem sonnigen Standort aufgestellt wird. Nur so kann sie ihre volle Leistung entfalten und den größtmöglichen Nutzen für Sie bringen. Achten Sie also darauf, dass die Anlage nicht von Bäumen oder anderen Hindernissen blockiert wird und stellen Sie sie an einem möglichst sonnigen Ort auf. Außerdem ist es wichtig, dass die Solaranlage regelmäßig gewartet und gereinigt wird. Damit sie ihre volle Leistung erbringt, müssen die Solarzellen sauber sein und frei von Schmutz und Staub. Regelmäßige Reinigungen sind also unerlässlich. Zudem sollten Sie die Anlage regelmäßig auf Schäden überprüfen und bei Bedarf reparieren lassen. Nur so können Sie sicherstellen, dass die Anlage auch langfristig zuverlässig arbeitet. Alles in allem ist eine Solaranlage für den Balkon eine hervorragende Alternative zur herkömmlichen Stromversorgung. Mit ihr können Sie nicht nur Geld sparen, sondern auch Ihren CO2-Footprint reduzieren. Beachten Sie jedoch die oben genannten Punkte, damit Sie möglichst viel Nutzen aus der Anlage ziehen können.",
+	},
 ];
 
-const QUERY_VARS =
-	process.env.NODE_ENV === "production"
-		? "?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5338914947&customid=&toolid=10001&mkevt=1"
-		: "";
-
-export default function Zubehoer() {
-	const [loading, setLoading] = useState(false);
-	const [modal, showModal] = useState(false);
-	const [company, setCompany] = useState(" ");
-	const [size, setSize] = useState("19");
-	const [products, setProducts] = useState([]);
-	const [highlights, setHighlights] = useState([]);
-
-	async function submitForm(e) {
-		e.preventDefault();
-		await fetchProducts();
-	}
-
-	async function fetchProducts(e) {
-		try {
-			if (loading) return;
-			setLoading(true);
-			const req = await fetch("/api/hello", {
-				headers: {
-					Accept: "application/json",
-					"Content-Type": "application/json",
-				},
-				method: "POST",
-				body: JSON.stringify({ params: `Zubehör PV Anlage` }),
-			});
-			const res = await req.json();
-
-			const mappedResponse = res.res.itemSummaries.map((product) => {
-				let link = product.itemWebUrl.split("?")[0];
-				return {
-					...product,
-					link: link + QUERY_VARS,
-				};
-			});
-
-			let price = 0;
-			mappedResponse.forEach((product) => {
-				price += parseFloat(product.price.value);
-			});
-
-			const durchschnitt = {
-				min: price / mappedResponse.length - 100,
-				max: price / mappedResponse.length + 100,
-			};
-
-			const filteredProducts = mappedResponse.filter((product) => {
-				return (
-					parseFloat(product.price.value) <= durchschnitt.max &&
-					parseFloat(product.price.value) >= durchschnitt.min
-				);
-			});
-
-			setProducts(mappedResponse);
-			setHighlights(filteredProducts);
-			setLoading(false);
-
-			if (filteredProducts.length) {
-				showModal(true);
-			}
-		} catch (error) {
-			console.log(error);
-			setLoading(false);
-		}
-	}
-
-	useEffect(() => {
-		fetchProducts();
-	}, []);
-
+export default function FaqPage() {
 	return (
-		<div className=" w-full min-h-screen">
+		<div className="bg-white w-full min-h-screen">
 			<HeadMeta
-				title="Solaranlage zubehör günstig kaufen - Preisvergleich"
-				description="Kaufen Sie Ihr Solaranlagezubehör bei uns und sichern Sie sich den besten Preis und die höchste Qualität!"
+				title="Preisvergleich von +1000 Original Felgen. Jetzt sparen!"
+				description="Preisvergleich Original Felgen +1000 Angeboten | Finde die besten Angebote und spare bares Geld bei deinem nächsten Kauf | Jetzt vergleichen"
 			/>
 
 			<div className="container mx-auto py-32">
 				<h1 className="text-biggest text-center font-semibold">
-					Günstige <span className="text-neon">Zubehör</span> für deine
-					<br />
-					Solaranlage finden!
+					Wir beantworten dir <br /> <span className="text-neon">häufig gestellte Fragen</span>
 				</h1>
 			</div>
 
-			<main className="bg-petrolish py-16">
-				{loading ? (
-					<div className="flex items-center justify-center">
-						<ActivityIndicator />
-					</div>
-				) : (
-					<div>
-						<div className="px-4 md:px-0 container mx-auto mb-2 mt-4">
-							<p className="text-zinc-500 text-sm my-4">
-								wir haben <strong className="font-medium">{products.length}</strong> top Angebote zu{" "}
-								{company} Sommerräder gefunden
-							</p>
-						</div>
-						<div className="px-4 md:px-0 container mx-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
-							{products.length
-								? products.map((product, index) => (
-										<Product product={product} highlights={highlights} key={index} />
-								  ))
-								: null}
-						</div>
-					</div>
-				)}
-			</main>
+			<FAQ data={FAQ_DATA} />
 
 			<div className="w-full relative aspect-auto md:aspect-video">
 				<img
-					src="/images/banner.jpg"
+					src="/images/solar-unterwegs.jpg"
 					alt=""
 					className="w-full md:h-full relative md:absolute top-0 left-0 object-cover aspect-video md:aspect-auto"
 				/>
@@ -170,8 +73,6 @@ export default function Zubehoer() {
 					</div>
 				</div>
 			</div>
-
-			<FAQ data={FAQ_DATA} title="Häufig gestellte Fragen" />
 		</div>
 	);
 }
