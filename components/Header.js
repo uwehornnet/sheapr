@@ -152,7 +152,7 @@ export default function Header() {
 										</div>
 										<div className="rounded-xl bg-zinc-100 p-4">
 											<img
-												src="/images/solaranlage-unterwegs.jpg"
+												src="/images/solar-unterwegs.jpg"
 												alt="Solaranlage für unterwegs oder zum campen"
 												className="rounded-lg w-full aspect-square bg-zinc-200 mb-4 object-cover max-w-[160px]"
 											/>
