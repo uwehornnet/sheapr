@@ -23,6 +23,11 @@ const FAQ_DATA = [
 		content:
 			"Solarstrom ist zwar eine großartige Alternative zur herkömmlichen Energieversorgung, aber es gibt auch einige Nachteile, die berücksichtigt werden sollten, bevor man sich für eine Solaranlage entscheidet. Zum einen ist Solarstrom nicht unbegrenzt verfügbar – er ist abhängig von der Sonneneinstrahlung, und an bewölkten oder regnerischen Tagen wird weniger Strom erzeugt. Zum anderen sind Solaranlagen relativ teuer in der Anschaffung und müssen regelmäßig gewartet werden. Auch die Batterien, die den Strom speichern, müssen irgendwann ausgetauscht werden.",
 	},
+	{
+		title: "Solaranlage für den Balkon – was gibt es zu beachten?",
+		content:
+			"Wenn Sie sich für die Anschaffung einer Solaranlage für Ihren Balkon entscheiden, gibt es einige Punkte, die Sie beachten sollten. Zunächst einmal ist es wichtig, dass Sie sich für ein Modell entscheiden, das zu Ihren Anforderungen passt. Solaranlagen gibt es in verschiedenen Größen und Leistungsklassen. Je nachdem, wie viel Strom Sie benötigen und wie viel Platz Sie auf Ihrem Balkon haben, sollten Sie sich für ein geeignetes Modell entscheiden. Zudem ist es wichtig, dass die Solaranlage an einem sonnigen Standort aufgestellt wird. Nur so kann sie ihre volle Leistung entfalten und den größtmöglichen Nutzen für Sie bringen. Achten Sie also darauf, dass die Anlage nicht von Bäumen oder anderen Hindernissen blockiert wird und stellen Sie sie an einem möglichst sonnigen Ort auf. Außerdem ist es wichtig, dass die Solaranlage regelmäßig gewartet und gereinigt wird. Damit sie ihre volle Leistung erbringt, müssen die Solarzellen sauber sein und frei von Schmutz und Staub. Regelmäßige Reinigungen sind also unerlässlich. Zudem sollten Sie die Anlage regelmäßig auf Schäden überprüfen und bei Bedarf reparieren lassen. Nur so können Sie sicherstellen, dass die Anlage auch langfristig zuverlässig arbeitet. Alles in allem ist eine Solaranlage für den Balkon eine hervorragende Alternative zur herkömmlichen Stromversorgung. Mit ihr können Sie nicht nur Geld sparen, sondern auch Ihren CO2-Footprint reduzieren. Beachten Sie jedoch die oben genannten Punkte, damit Sie möglichst viel Nutzen aus der Anlage ziehen können.",
+	},
 ];
 
 export default function Home() {
