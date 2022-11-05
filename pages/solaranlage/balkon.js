@@ -130,20 +130,12 @@ export default function FuerBalkon() {
 						<ActivityIndicator />
 					</div>
 				) : (
-					<div>
-						<div className="px-4 md:px-0 container mx-auto mb-2 mt-4">
-							<p className="text-zinc-500 text-sm my-4">
-								wir haben <strong className="font-medium">{products.length}</strong> top Angebote zu{" "}
-								{company} Sommerräder gefunden
-							</p>
-						</div>
-						<div className="px-4 md:px-0 container mx-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
-							{products.length
-								? products.map((product, index) => (
-										<Product product={product} highlights={highlights} key={index} />
-								  ))
-								: null}
-						</div>
+					<div className="px-4 md:px-0 container mx-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+						{products.length
+							? products.map((product, index) => (
+									<Product product={product} highlights={highlights} key={index} />
+							  ))
+							: null}
 					</div>
 				)}
 			</main>
