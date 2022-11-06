@@ -16,7 +16,7 @@ export default function Footer() {
 					</Link>
 				</div>
 			</div>
-			<footer className="w-full bg-darker py-16 px-8">
+			<footer className="w-full bg-darker pt-16 pb-4 px-8">
 				<div className="container mx-auto text-white grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-16">
 					<div className="col-span-1">
 						<p>
@@ -60,6 +60,24 @@ export default function Footer() {
 							</li>
 						</ul>
 					</div>
+				</div>
+
+				<div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-white text-xs mt-16">
+					<p>
+						Webdesign und Entwicklung von <a href="https://uwe-horn.net">Uwe Horn</a>
+					</p>
+					<ul className="flex items-center justify-end gap-8">
+						<li>
+							<Link href="/privacy">
+								<span>Privacy</span>
+							</Link>
+						</li>
+						<li>
+							<Link href="/imprint" target="_blank">
+								<span>Imprint</span>
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</footer>
 		</>

@@ -5,8 +5,12 @@ export default function Imprint() {
 		<div className="bg-zinc-100 w-full min-h-screen">
 			<HeadMeta title="Imprint - Terms of usage" description="Imprint - Terms of usage" />
 
+			<div className="container mx-auto py-32">
+				<h1 className="text-biggest text-center font-semibold">Imprint</h1>
+			</div>
+
 			<main className="container mx-auto py-16">
-				<div class="text">
+				<div className="text">
 					<h1 className="text-medium">Imprint - Terms of usage</h1>
 					<h3> 1. Terms </h3>{" "}
 					<p>

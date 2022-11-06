@@ -8,9 +8,12 @@ export default function Privacy() {
 				description="The following gives a simple overview of what happens to your personal information when you visit our website."
 			/>
 
+			<div className="container mx-auto py-32">
+				<h1 className="text-biggest text-center font-semibold">Privacy</h1>
+			</div>
+
 			<main className="container mx-auto my-16">
 				<div className="text">
-					<h1 className="text-medium">Privacy</h1>
 					<h5>1. General</h5>{" "}
 					<p>
 						The following gives a simple overview of what happens to your personal information when you
@@ -190,7 +193,7 @@ export default function Privacy() {
 						As an alternative to the browser add-on, particularly with browsers on mobile end devices, you
 						can also prevent the recording by Google Analytics by clicking on this link:{" "}
 						<span
-							class="cookie-popup"
+							className="cookie-popup"
 							data-cookie-type="analytics"
 							data-text-title="Successful contradiction"
 							data-text-content="Analytics is no longer used"
