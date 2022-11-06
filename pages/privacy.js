@@ -13,7 +13,7 @@ export default function Privacy() {
 			</div>
 
 			<main className="container mx-auto my-16">
-				<div className="text">
+				<div className="text px-8">
 					<h5>1. General</h5>{" "}
 					<p>
 						The following gives a simple overview of what happens to your personal information when you

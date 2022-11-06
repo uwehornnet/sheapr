@@ -10,7 +10,7 @@ export default function Imprint() {
 			</div>
 
 			<main className="container mx-auto py-16">
-				<div className="text">
+				<div className="text px-8">
 					<h1 className="text-medium">Imprint - Terms of usage</h1>
 					<h3> 1. Terms </h3>{" "}
 					<p>
