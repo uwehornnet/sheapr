@@ -48,10 +48,6 @@ export default function FuerBalkon() {
 	const [products, setProducts] = useState([]);
 	const [highlights, setHighlights] = useState([]);
 
-	async function submitForm(e) {
-		e.preventDefault();
-		await fetchProducts();
-	}
 
 	async function fetchProducts(e) {
 		try {

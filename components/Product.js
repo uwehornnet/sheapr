@@ -68,7 +68,7 @@ export default function Product({ highlights, product }) {
 					rel="noreferrer"
 					className="rounded-lg product-button flex items-center justify-center gap-4 mt-4 px-6 py-3 bg-neon/0 group-hover:bg-neon text-camo transition-all duration-300 ease-in-out text-sm md:text-base"
 				>
-					<span>zum Händler</span>
+					<span>auf Ebay ansehen</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
