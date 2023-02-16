@@ -7,8 +7,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://solarchecks.de/
+Host: https://www.solarchecks.de/
 
 # Sitemaps
-Sitemap: https://solarchecks.de/sitemap.xml
-Sitemap: https://solarchecks.de/server-sitemap.xml
+Sitemap: https://www.solarchecks.de/sitemap.xml
+Sitemap: https://www.solarchecks.de/server-sitemap.xml

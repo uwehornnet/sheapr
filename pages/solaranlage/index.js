@@ -7,6 +7,8 @@ import FAQ from "../../components/FAQ";
 
 import HeadMeta from "../../components/HeadMeta";
 
+import { QUERY_VARS } from "../../utils/QueryVars";
+
 const FAQ_DATA = [
 	{
 		title: "Solarstrom – was ist das? ",
@@ -35,10 +37,6 @@ const FAQ_DATA = [
 	},
 ];
 
-const QUERY_VARS =
-	process.env.NODE_ENV === "production"
-		? "?amdata=enc%3AAQAHAAAAoD6xcFatNtZNTBC99reD4H2PpIaEZfJAHB%2BVed0PKMeFnIv6eRphAQBBPBr4WBw22L3ONvwBYBpJhJqx3MAH1pweDz%2BNq%2FdP1YKN2kESdAhgmAtFomnwD85dTTXdBoBMn2L96NxclXvVkdN1rXVkkjGR7o2XI5ymZiLWkY9%2Bey7O8N4ZxIAEqmKUs0j2lIdiBfUx0kJf9Q9%2BrW0mCrt%2Bku8%3D&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5338952852&customid=&toolid=10001&mkevt=1"
-		: "";
 
 export default function Solaranlage() {
 	const [loading, setLoading] = useState(false);
