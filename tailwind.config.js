@@ -7,7 +7,7 @@ module.exports = {
 				"spin-slow": "spin 20s linear infinite",
 			},
 			colors: {
-				neon: "#E8F985",
+				neon: "#5D24FF",
 				camo: "#687517",
 				pinkish: "#FC749D",
 				lila: "#B275FF",
@@ -15,7 +15,7 @@ module.exports = {
 				petrolish: "#EDF9F7",
 				petrol: "#D7EEEB",
 				dark: "#223038",
-				darker: "#141D22",
+				darker: "#333254",
 				text: "#223038",
 			},
 			fontFamily: {
@@ -32,7 +32,7 @@ module.exports = {
 			aspectRatio: {
 				portrait: "9 / 13",
 				video: "16 / 9",
-				header: "16 / 8",
+				header: "16 / 6",
 			},
 		},
 	},
