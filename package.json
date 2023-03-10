@@ -12,6 +12,7 @@
 	"dependencies": {
 		"autoprefixer": "^10.4.12",
 		"cookies-next": "^2.1.1",
+		"crypto": "^1.0.1",
 		"ebay-api": "^7.0.2",
 		"ebay-node-api": "^2.9.0",
 		"gsap": "^3.11.3",
