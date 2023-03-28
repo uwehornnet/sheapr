@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: "Jost";
+		font-weight: 400;
+		src: url(/fonts/Jost-Regular.woff) format("woff"),
+			url(/fonts/Jost-Regular.ttf) format("ttf");
+	}
+	
+	@font-face {
+		font-family: "Jost";
+		font-weight: 500;
+		src: url(/fonts/Jost-Semibold.woff) format("woff"),
+			url(/fonts/Jost-Semibold.ttf) format("ttf");
+	}
+
+	body {
+		font-size: 16px;
+		font-weight: 400;
+		font-family: "Jost", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+}
+
+@layer utilities {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	.text-biggest {
+		font-size: clamp(2rem, 4vw, 5.6rem);
+	}
+
+	.text-bigger {
+		font-size: clamp(1.6rem, 2.8vw, 4rem);
+	}
+
+	.text-big {
+		font-size: clamp(1.6rem, 2vw, 2rem);
+	}
+
+	.text-medium {
+		font-size: clamp(1.2rem, 1.4vw, 2.4rem);
+	}
+
+	.text-small {
+		font-size: clamp(1rem, 1vw, 1.6rem);
+	}
+
+	.link {
+		@apply font-bold underline underline-offset-8 mb-4;
+	}
+}

@@ -1,5 +1,9 @@
 import Head from "next/head";
 
+import BannerGrid from "../components/BannerGrid";
+import ProductSlider from "../components/ProductSlider";
+import MostSearchedCollections from "../components/MostSearchedCollections";
+
 export default function Home() {
 	return (
 		<div>
@@ -9,7 +13,22 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main></main>
+			<main className="max-w-[1980px] mx-auto">
+				<BannerGrid items={[1, 1, 1]} direction="right" />
+
+				<div className="py-2 px-4 md:px-6">
+					<div className="relative">
+						<h2 className="text-big">Most viewed</h2>
+						<p>Top 10 most sold this week, next day delivery.</p>
+					</div>
+
+					<ProductSlider products={[1, 1, 1, 1, 1]} />
+				</div>
+
+				<BannerGrid direction="left" items={[1, 1, 1]} />
+
+				<MostSearchedCollections />
+			</main>
 
 			<footer></footer>
 		</div>
