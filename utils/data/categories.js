@@ -42,19 +42,6 @@ export const categories = [
 			description: "",
 		},
 		seo: "",
-		subCategories: [
-			{
-				id: 9394,
-				name: "Hüllen & Schutzfolien",
-				slug: "huellen-schutz",
-				searchPhrase: "Schutzfolie, hülle",
-				meta: {
-					title: "",
-					description: "",
-				},
-				seo: "",
-			},
-		],
 	},
 	{
 		id: 159912,

@@ -64,14 +64,16 @@ export default function CategorySlugPage() {
 						{staticProducts.length ? (
 							<>
 								<div className="relative">
-									<h2 className="text-big">Most viewed</h2>
-									<p>Top {staticProducts.length} most sold this week, next day delivery.</p>
+									<h2 className="text-big">Bestseller</h2>
+									<p>Top {staticProducts.length} handpicked Bestsellers</p>
 								</div>
 								<ProductSlider products={staticProducts} />
+								<BannerGrid direction="left" items={list} />
 							</>
 						) : null}
-						<div className="relative">
-							<p>{`${products?.items.length} von ${products?.total} angezeigt`}</p>
+
+						<div className="relative mt-4">
+							<p>{`${products?.items.length} von ${products?.total} Produkte`}</p>
 						</div>
 						{products.items ? <ProductGrid products={products.items} /> : null}
 

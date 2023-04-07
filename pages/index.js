@@ -29,7 +29,7 @@ export default function Home() {
 						<p>Top 10 most sold this week, next day delivery.</p>
 					</div>
 
-					{!loading && <ProductSlider products={products} />}
+					{!loading && <ProductSlider products={products.slice(0, 8)} />}
 				</div>
 
 				<div className=" px-4 md:px-6">
