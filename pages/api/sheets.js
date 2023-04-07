@@ -5,14 +5,14 @@ import { google } from "googleapis";
 export default async function handler(req, res) {
 	try {
 		const auth = new google.auth.GoogleAuth({
-			keyFile: path.join(process.cwd(), "sheapr.json"), //the key file
+			keyFile: path.join(process.cwd(), "sheapr.json"),
 			scopes: "https://www.googleapis.com/auth/spreadsheets",
 		});
 		const authClientObject = await auth.getClient();
 		const googleSheetsInstance = google.sheets({ version: "v4", auth: authClientObject });
 
 		const response = await googleSheetsInstance.spreadsheets.values.get({
-			auth, //auth object
+			auth,
 			spreadsheetId: "1-Yoeg-teOikmsTT9HfWBsyxIicoUkW7tp7L5xgHVTSY",
 			range: "Tabellenblatt1",
 		});
