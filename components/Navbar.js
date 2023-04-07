@@ -4,7 +4,7 @@ import { navitems } from "../utils/navitems";
 
 const NavBar = () => {
 	return (
-		<div className="px-4 md:px-6 bg-teal-400/20 text-teal-800 sticky top-0 align-top z-[90] backdrop-blur-lg overflow-x-scroll no-scrollbar">
+		<div className="px-4 md:px-6 bg-teal-400/30 text-teal-800 sticky top-0 align-top z-[90] backdrop-blur-xl overflow-x-scroll no-scrollbar">
 			<ul className="flex justify-start md:justify-center items-center">
 				{navitems.map((item, index) => (
 					<li key={index}>

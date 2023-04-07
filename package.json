@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "ebay-api": "^8.4.0",
+    "googleapis": "^114.0.0",
     "next": "13.2.4",
+    "node-xlsx": "^0.21.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

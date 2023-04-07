@@ -26,6 +26,8 @@ module.exports = {
 				portrait: "9 / 13",
 				video: "16 / 9",
 				header: "16 / 8",
+				banner: "16 / 4",
+				bannerbox: "1 / 2",
 			},
 			animation: {
 				"spin-slow": "spin 20s linear infinite",

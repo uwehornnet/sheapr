@@ -1,43 +1,54 @@
 import Link from "next/link";
 
-const Product = () => {
+const Product = ({ product }) => {
 	return (
-		<div className="relative group border-slate-200 border min-w-[300px] md:min-w-fit rounded-sm">
-			<div className="relative">
+		<div className="relative h-full flex flex-col group border-slate-200 bg-white border rounded-sm hover:shadow-lg duration-300 transition-shadow ease-out">
+			<div className="relative flex items-center justify-center bg-white p-8">
 				<img
-					src="/vercel.svg"
-					alt=""
-					className="w-full aspect-square md:aspect-portrait object-cover rounded-sm bg-teal-100"
+					src={product.image}
+					alt={product.title}
+					className="w-full aspect-square object-contain rounded-sm "
 				/>
-
-				<Link
-					href="/"
-					className="hidden group-hover:block absolute bottom-4 text-center bg-teal-800 text-teal-300 left-1/2 -translate-x-1/2 p-2 w-[80%] rounded-sm uppercase text-sm tracking-wider font-medium"
-				>
-					auf Ebay ansehen
-				</Link>
 			</div>
 
-			<div className="text-center p-4 bg-white">
-				<h3 className="text-medium font-medium">Product title</h3>
-				<small className=" text-green-400 flex items-center justify-center">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						strokeWidth={1.5}
-						stroke="currentColor"
-						className="w-4 h-4 mr-1"
+			<div className="flex-1 text-left p-4 bg-white flex flex-col justify-between">
+				<div>
+					<h3 className="text-small m-0">{product.title.substring(0, 40)}</h3>
+					<p className="mt-1 mb-4 font-medium">{product.price} EUR</p>
+				</div>
+
+				<div>
+					<Link
+						href={product.link}
+						className="block w-full rounded-full border-2 border-black px-6 py-2 my-2 text-center font-medium group-hover:text-white group-hover:bg-black"
 					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
-						/>
-					</svg>
-					in Stock
-				</small>
-				<p className="mt-2">€ 123,00</p>
+						{`auf ${product.store} ansehen`}
+					</Link>
+
+					<small className=" text-green-400 flex items-center justify-start gap-1">
+						<span className="w-2 h-2 rounded-full block bg-green-300"></span>
+						in Stock
+					</small>
+					{product.shipping ? (
+						<small className="flex items-center gap-1 text-slate-400">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={2}
+								stroke="currentColor"
+								className="w-4 h-4"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+								/>
+							</svg>
+							<span>Versand: {parseFloat(product.shipping).toFixed(2)} EUR </span>
+						</small>
+					) : null}
+				</div>
 			</div>
 		</div>
 	);

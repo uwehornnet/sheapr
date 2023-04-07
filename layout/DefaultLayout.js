@@ -5,7 +5,7 @@ const DefaultLayout = ({ children }) => {
 	return (
 		<>
 			<HeaderLayout />
-			<div className="bg-slate-50">{children}</div>
+			<div className="bg-slate-50 pb-6">{children}</div>
 			<FooterLayout />
 		</>
 	);
