@@ -4,9 +4,16 @@ import { google } from "googleapis";
 
 export default async function handler(req, res) {
 	try {
+		console.log({ clientmail: process.env.GOOGLE_SHEETS_CLIENT_EMAIL });
+		const target = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
+
 		const auth = new google.auth.GoogleAuth({
-			keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
-			scopes: "https://www.googleapis.com/auth/spreadsheets",
+			credentials: {
+				client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
+				client_id: process.env.GOOGLE_SHEETS_CLIENT_ID,
+				private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY.replace(/\\n/g, "\n"),
+			},
+			scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 		});
 		const authClientObject = await auth.getClient();
 		const googleSheetsInstance = google.sheets({ version: "v4", auth: authClientObject });
@@ -16,6 +23,7 @@ export default async function handler(req, res) {
 			spreadsheetId: process.env.SHEET_ID,
 			range: "Tabellenblatt1",
 		});
+		console.log({ response });
 
 		const rows = response.data.values;
 
