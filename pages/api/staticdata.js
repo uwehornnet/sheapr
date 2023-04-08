@@ -3,8 +3,10 @@ import { promises as fs } from "fs";
 
 export default async function handler(req, res) {
 	try {
-		const dir = path.join(process.cwd(), "db");
-		const fileContent = await fs.readFile(dir + "/data.json");
+	
+		const filePath =
+			process.env.NODE_ENV === "development" ? path.join(process.cwd(), "db") + "/data.json" : "/tmp/data.json";
+		const fileContent = await fs.readFile(filePath);
 		const parsed = JSON.parse(fileContent);
 
 		res.status(200).json({ status: "ok", res: parsed });
