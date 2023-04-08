@@ -36,10 +36,12 @@ export default async function handler(req, res) {
 			}
 		});
 
-		const dir = path.join(process.cwd(), "db");
+		const filePath =
+			process.env.NODE_ENV === "development" ? path.join(process.cwd(), "db") + "/data.json" : "/tmp/data.json";
+
 		const data = JSON.stringify(sheetData);
 
-		await fs.writeFile(dir + "/data.json", data, (err) => {
+		await fs.writeFile(filePath, data, (err) => {
 			if (err) throw err;
 			console.log("Data written to file");
 		});
