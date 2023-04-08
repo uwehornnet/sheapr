@@ -37,7 +37,9 @@ export default async function handler(req, res) {
 		});
 
 		const filePath =
-			process.env.NODE_ENV === "development" ? path.join(process.cwd(), "db") + "/data.json" : "/tmp/data.json";
+			process.env.NODE_ENV === "development"
+				? path.join(process.cwd(), "public") + "/data.json"
+				: path.join(process.cwd(), "public") + "/data.json";
 
 		const data = JSON.stringify(sheetData);
 
