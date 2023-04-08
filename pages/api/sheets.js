@@ -4,9 +4,6 @@ import { google } from "googleapis";
 
 export default async function handler(req, res) {
 	try {
-		console.log({ clientmail: process.env.GOOGLE_SHEETS_CLIENT_EMAIL });
-		const target = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
-
 		const auth = new google.auth.GoogleAuth({
 			credentials: {
 				client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
