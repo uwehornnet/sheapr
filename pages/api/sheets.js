@@ -5,7 +5,7 @@ import { google } from "googleapis";
 export default async function handler(req, res) {
 	try {
 		const auth = new google.auth.GoogleAuth({
-			keyFile: path.join(process.cwd(), "sheapr.json"),
+			keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
 			scopes: "https://www.googleapis.com/auth/spreadsheets",
 		});
 		const authClientObject = await auth.getClient();
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
 		const response = await googleSheetsInstance.spreadsheets.values.get({
 			auth,
-			spreadsheetId: "1-Yoeg-teOikmsTT9HfWBsyxIicoUkW7tp7L5xgHVTSY",
+			spreadsheetId: process.env.SHEET_ID,
 			range: "Tabellenblatt1",
 		});
 
