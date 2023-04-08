@@ -6,8 +6,8 @@ export default async function handler(req, res) {
 	
 		const filePath =
 			process.env.NODE_ENV === "development"
-				? path.join(process.cwd(), "db") + "/data.json"
-				: path.join("/tmp", "data.json");
+				? path.join(process.cwd(), "public") + "/data.json"
+				: path.join(process.cwd(), "public") + "/data.json";
 		const fileContent = await fs.readFile(filePath);
 		const parsed = JSON.parse(fileContent);
 
