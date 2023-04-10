@@ -71,6 +71,7 @@ const HeaderLayout = ({ children }) => {
 					>
 						<input
 							type="text"
+							name="s"
 							className="bg-transparent text-xs block px-4 py-2 outline-none focus:outline-none tracking-wider md:min-w-[320px]"
 							placeholder="search"
 						/>

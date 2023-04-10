@@ -12,26 +12,18 @@ import BannerGrid from "../../components/BannerGrid";
 import { useProducts } from "../../hooks/useProducts";
 import ActivityIndicator from "../../components/ActivityIndicator";
 
-export default function CategorySlugPage() {
-	const [list, setList] = useState([]);
+export default function CategorySlugPage({ cat, offsetList }) {
 	const [staticProducts, setStaticProducts] = useState([]);
-	const [offset, setOffset] = useState(25);
+	const [offset, setOffset] = useState(offsetList);
 	const { query } = useRouter();
 	const { slug } = query;
 	const meta = categories.find((c) => c.slug === slug);
 
-	const { loading: staticDataLoading, products: staticData } = useStaticData({ meta });
+	const { products: staticData } = useStaticData({ meta });
 	const { loading, products } = useProducts({ meta, offset });
 
 	useEffect(() => {
 		if (meta) {
-			setList(
-				categories
-					.filter((c) => c.slug !== meta.slug)
-					.sort((a, b) => 0.5 - Math.random())
-					.slice(0, 3)
-			);
-
 			setStaticProducts(
 				staticData.filter((p) => {
 					return p.category == meta.slug;
@@ -68,25 +60,37 @@ export default function CategorySlugPage() {
 									<p>Top {staticProducts.length} handpicked Bestsellers</p>
 								</div>
 								<ProductSlider products={staticProducts} />
-								<BannerGrid direction="left" items={list} />
+								<BannerGrid direction="left" items={cat.slice(0, 3)} />
 							</>
 						) : null}
 
-						<div className="relative mt-4">
-							<p>{`${products?.items.length} von ${products?.total} Produkte`}</p>
-						</div>
-						{products.items ? <ProductGrid products={products.items} /> : null}
+						{products.items.length ? (
+							<>
+								<div className="relative mt-4">
+									<p>{`${products?.items.length} von ${products?.total} Produkte`}</p>
+								</div>
+								<ProductGrid products={products.items} />
+							</>
+						) : null}
 
-						<button
-							onClick={() => {
-								setOffset(25 + products.offset);
-							}}
-						>
-							load more
-						</button>
+						{loading ? (
+							<ActivityIndicator />
+						) : (
+							<div className="flex items-center justify-center my-8">
+								<button
+									className="inline-block py-3 px-16 text-center hover:bg-black uppercase text-sm rounded-full border-2 border-black text-black hover:text-white"
+									onClick={() => {
+										setOffset(25 + products.offset);
+									}}
+								>
+									<span className="block font-medium tracking-wider">load more</span>
+									<small>{`(${products?.total - products?.items.length} available)`}</small>
+								</button>
+							</div>
+						)}
 					</div>
 					<div className=" px-4 md:px-6">
-						<BannerGrid direction="left" items={list} />
+						<BannerGrid direction="right" items={cat.slice(-3)} />
 					</div>
 
 					<MostSearchedCollections />
@@ -96,4 +100,22 @@ export default function CategorySlugPage() {
 			)}
 		</div>
 	);
+}
+
+export async function getStaticPaths() {
+	return {
+		paths: categories.map((c) => {
+			return { params: { slug: c.slug } };
+		}),
+		fallback: false,
+	};
+}
+
+export async function getStaticProps(context) {
+	return {
+		props: {
+			offsetList: 0,
+			cat: categories.sort((a, b) => 0.5 - Math.random()).slice(-6),
+		},
+	};
 }

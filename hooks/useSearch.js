@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { QUERY_VARS } from "../utils/QueryVars";
 
-export const useProducts = ({ meta, offset }) => {
+export const useSearch = ({ param, offset }) => {
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const [products, setProducts] = useState({
-		offset,
+		offset: offset || 0,
 		items: [],
-		uid: null,
 	});
 
 	const fetchProducts = async () => {
@@ -15,15 +14,14 @@ export const useProducts = ({ meta, offset }) => {
 			if (loading) return;
 			setLoading(true);
 
-			const req = await fetch("/api/category", {
+			const req = await fetch("/api/find", {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
 				},
 				method: "POST",
 				body: JSON.stringify({
-					id: meta.id,
-					query: meta.searchPhrase,
+					query: param,
 					offset,
 				}),
 			});
@@ -40,23 +38,11 @@ export const useProducts = ({ meta, offset }) => {
 					shipping: product.shippingOptions[0].shippingCost.value,
 				};
 			});
-
-			if (meta.slug == products.uid) {
-				setProducts({
-					offset,
-					uid: meta.slug,
-					total: res.res.total,
-					items: [...products.items, ...mappedResponse],
-				});
-			} else {
-				setProducts({
-					offset,
-					uid: meta.slug,
-					total: res.res.total,
-					items: [...mappedResponse],
-				});
-			}
-
+			setProducts({
+				offset,
+				total: res.res.total,
+				items: mappedResponse,
+			});
 			setLoading(false);
 		} catch (error) {
 			setError(error);
@@ -64,10 +50,10 @@ export const useProducts = ({ meta, offset }) => {
 	};
 
 	useEffect(() => {
-		if (meta) {
+		if (param) {
 			fetchProducts();
 		}
-	}, [meta, offset]);
+	}, [param]);
 
 	return {
 		loading,

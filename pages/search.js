@@ -1,13 +1,16 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 import BannerGrid from "../components/BannerGrid";
-import ProductSlider from "../components/ProductSlider";
+import ProductGrid from "../components/ProductGrid";
 import MostSearchedCollections from "../components/MostSearchedCollections";
-import { useStaticData } from "../hooks/useStaticData";
 import { categories } from "../utils/data/categories";
+import { useSearch } from "../hooks/useSearch";
+import ActivityIndicator from "../components/ActivityIndicator";
 
 export default function Home({ cat }) {
-	const { loading, products } = useStaticData();
+	const { query } = useRouter();
+	const { loading, products } = useSearch({ param: query.s });
 	return (
 		<div>
 			<Head>
@@ -17,21 +20,26 @@ export default function Home({ cat }) {
 			</Head>
 
 			<main className="max-w-[1980px] mx-auto">
-				<div className=" px-4 md:px-6">
-					<BannerGrid direction="right" items={cat.slice(0, 3)} />
-				</div>
-
 				<div className="py-2 px-4 md:px-6">
 					<div className="relative">
-						<h2 className="text-big">Most viewed</h2>
-						<p>Top 10 most sold this week, next day delivery.</p>
+						<h2 className="text-big"></h2>
+						<p></p>
 					</div>
 
-					{!loading && <ProductSlider products={products.slice(0, 8)} />}
+					{!loading && products.items.length ? (
+						<>
+							<div className="relative mt-4">
+								<p>{`${products?.items.length} von ${products?.total} Produkte`}</p>
+							</div>
+							<ProductGrid products={products.items} />
+						</>
+					) : (
+						<ActivityIndicator />
+					)}
 				</div>
 
 				<div className=" px-4 md:px-6">
-					<BannerGrid direction="left" items={cat.slice(-3)} />
+					<BannerGrid direction="left" items={cat} />
 				</div>
 
 				<MostSearchedCollections />
@@ -43,7 +51,7 @@ export default function Home({ cat }) {
 export async function getStaticProps(context) {
 	return {
 		props: {
-			cat: categories.sort((a, b) => 0.5 - Math.random()).slice(-6),
+			cat: categories.sort((a, b) => 0.5 - Math.random()).slice(-3),
 		},
 	};
 }
