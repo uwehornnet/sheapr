@@ -26,7 +26,7 @@ export default function Home({ cat }) {
 
 				<div className="py-2 px-4 md:px-6">
 					<div className="relative">
-						<h2 className="text-big">Most viewed</h2>
+						<h2 className="text-big font-medium">Bestseller</h2>
 						<p>Top 10 most sold this week, next day delivery.</p>
 					</div>
 

@@ -9,7 +9,7 @@ const NavBar = () => {
 				{navitems.map((item, index) => (
 					<li key={index}>
 						<Link
-							href={`/${item.slug}`}
+							href={`/`}
 							className="inline-block py-2 px-6 uppercase tracking-wider text-sm font-medium hover:bg-teal-800 hover:text-teal-200"
 						>
 							{item.name}

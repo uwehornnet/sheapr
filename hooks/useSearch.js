@@ -38,11 +38,22 @@ export const useSearch = ({ param, offset }) => {
 					shipping: product.shippingOptions[0].shippingCost.value,
 				};
 			});
-			setProducts({
-				offset,
-				total: res.res.total,
-				items: mappedResponse,
-			});
+
+			if (param == products.uid) {
+				setProducts({
+					offset,
+					uid: param,
+					total: res.res.total,
+					items: [...products.items, ...mappedResponse],
+				});
+			} else {
+				setProducts({
+					offset,
+					uid: param,
+					total: res.res.total,
+					items: [...mappedResponse],
+				});
+			}
 			setLoading(false);
 		} catch (error) {
 			setError(error);
@@ -53,7 +64,7 @@ export const useSearch = ({ param, offset }) => {
 		if (param) {
 			fetchProducts();
 		}
-	}, [param]);
+	}, [param, offset]);
 
 	return {
 		loading,

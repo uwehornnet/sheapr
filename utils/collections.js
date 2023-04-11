@@ -1,26 +1,26 @@
 export const collections = [
 	{
-		slug: "",
-		name: "collection",
+		slug: "iphone 14 pro",
+		name: "iPhone 14 Pro",
 	},
 	{
-		slug: "",
-		name: "collection",
+		slug: "playstation5",
+		name: "Playstation5",
 	},
 	{
-		slug: "",
-		name: "collection",
+		slug: "solaranlage balkonkraftwerk",
+		name: "Solaranlage Balkon",
 	},
 	{
-		slug: "",
-		name: "collection",
+		slug: "Air Pods Pro 2",
+		name: "Air Pods Pro 2",
 	},
 	{
-		slug: "",
-		name: "collection",
+		slug: "Samsung Galaxy",
+		name: "Samsung Galaxy",
 	},
 	{
-		slug: "",
-		name: "collection",
+		slug: "iPhone 14 Panzerglasfolie",
+		name: "iPhone 14 Panzerglasfolie",
 	},
 ];
