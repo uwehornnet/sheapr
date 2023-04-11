@@ -1,7 +1,7 @@
 export const navitems = [
 	{
 		slug: "most-watched",
-		name: "Most watched",
+		name: "Most watched 🚨",
 	},
 	{
 		slug: "best-offers",
@@ -9,10 +9,10 @@ export const navitems = [
 	},
 	{
 		slug: "geschenkideen",
-		name: "Geschenkideen",
+		name: "Geschenkideen 🎁",
 	},
 	{
 		slug: "angebote",
-		name: "Angebote",
+		name: "Angebote 🚀",
 	},
 ];

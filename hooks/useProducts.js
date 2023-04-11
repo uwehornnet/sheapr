@@ -25,7 +25,6 @@ export const useProducts = ({ meta, offset }) => {
 					id: meta.id,
 					query: meta.searchPhrase,
 					offset,
-					limit: 30,
 				}),
 			});
 			const res = await req.json();
