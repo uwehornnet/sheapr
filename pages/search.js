@@ -8,9 +8,10 @@ import { categories } from "../utils/data/categories";
 import { useSearch } from "../hooks/useSearch";
 import ActivityIndicator from "../components/ActivityIndicator";
 
-export default function Home({ cat }) {
+export default function Search({ cat }) {
+	const [offset, setOffset] = useState(offsetList);
 	const { query } = useRouter();
-	const { loading, products } = useSearch({ param: query.s });
+	const { loading, products } = useSearch({ param: query.s, offset });
 	return (
 		<div>
 			<Head>
@@ -29,15 +30,29 @@ export default function Home({ cat }) {
 						<p></p>
 					</div>
 
-					{!loading && products.items.length ? (
+					{products.items.length ? (
 						<>
 							<div className="relative mt-4">
 								<p>{`${products?.items.length} von ${products?.total} Produkte`}</p>
 							</div>
 							<ProductGrid products={products.items} />
 						</>
-					) : (
+					) : null}
+
+					{loading ? (
 						<ActivityIndicator />
+					) : (
+						<div className="flex items-center justify-center my-8">
+							<button
+								className="inline-block py-3 px-16 text-center hover:bg-black uppercase text-sm rounded-full border-2 border-black text-black hover:text-white"
+								onClick={() => {
+									setOffset(25 + products.offset);
+								}}
+							>
+								<span className="block font-medium tracking-wider">load more</span>
+								<small>{`(${products?.total - products?.items.length} available)`}</small>
+							</button>
+						</div>
 					)}
 				</div>
 
