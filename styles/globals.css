@@ -13,8 +13,8 @@
 	@font-face {
 		font-family: "Jost";
 		font-weight: 500;
-		src: url(/fonts/Jost-Semibold.woff) format("woff"),
-			url(/fonts/Jost-Semibold.ttf) format("ttf");
+		src: url(/fonts/Jost-SemiBold.woff) format("woff"),
+			url(/fonts/Jost-SemiBold.ttf) format("ttf");
 	}
 
 	body {
