@@ -7,6 +7,10 @@ export default function Document() {
 	return (
 		<Html lang="de">
 			<Head>
+				<link rel="preload" href="/fonts/Jost-Regular.woff" as="font" crossOrigin="" />
+				<link rel="preload" href="/fonts/Jost-Regular.ttf" as="font" crossOrigin="" />
+				<link rel="preload" href="/fonts/Jost-SemiBold.woff" as="font" crossOrigin="" />
+				<link rel="preload" href="/fonts/Jost-SemiBold.ttf" as="font" crossOrigin="" />
 				<Script
 					async
 					id="adsense"
