@@ -10,7 +10,7 @@ const NavBar = () => {
 					<li key={index}>
 						<Link
 							href={`/`}
-							className="inline-block py-2 px-6 uppercase tracking-wider text-sm font-medium hover:bg-teal-800 hover:text-teal-200"
+							className="inline-block whitespace-pre py-2 px-6 uppercase tracking-wider text-sm font-medium hover:bg-teal-800 hover:text-teal-200"
 						>
 							{item.name}
 						</Link>
