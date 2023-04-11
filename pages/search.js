@@ -10,7 +10,7 @@ import { useSearch } from "../hooks/useSearch";
 import ActivityIndicator from "../components/ActivityIndicator";
 
 export default function Search({ cat }) {
-	const [offset, setOffset] = useState(offsetList);
+	const [offset, setOffset] = useState(0);
 	const { query } = useRouter();
 	const { loading, products } = useSearch({ param: query.s, offset });
 	return (
