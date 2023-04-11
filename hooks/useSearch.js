@@ -23,6 +23,7 @@ export const useSearch = ({ param, offset }) => {
 				body: JSON.stringify({
 					query: param,
 					offset,
+					limit: 30,
 				}),
 			});
 			const res = await req.json();

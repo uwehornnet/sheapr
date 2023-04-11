@@ -46,7 +46,7 @@ export default function Search({ cat }) {
 							<button
 								className="inline-block py-3 px-16 text-center hover:bg-black uppercase text-sm rounded-full border-2 border-black text-black hover:text-white"
 								onClick={() => {
-									setOffset(25 + products.offset);
+									setOffset(30 + products.offset);
 								}}
 							>
 								<span className="block font-medium tracking-wider">load more</span>
