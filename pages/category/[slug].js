@@ -12,7 +12,7 @@ import BannerGrid from "../../components/BannerGrid";
 import { useProducts } from "../../hooks/useProducts";
 import ActivityIndicator from "../../components/ActivityIndicator";
 
-export default function CategorySlugPage({ cat, offsetList }) {
+export default function CategorySlugPage({ cat, seo, offsetList }) {
 	const [staticProducts, setStaticProducts] = useState([]);
 	const [offset, setOffset] = useState(offsetList);
 	const { query } = useRouter();
@@ -35,8 +35,8 @@ export default function CategorySlugPage({ cat, offsetList }) {
 	return (
 		<div>
 			<Head>
-				<title>{meta?.meta.title}</title>
-				<meta name="description" content={meta?.meta.description} />
+				<title>{seo?.title}</title>
+				<meta name="description" content={seo?.description} />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			{meta ? (
@@ -105,15 +105,18 @@ export default function CategorySlugPage({ cat, offsetList }) {
 export async function getStaticPaths() {
 	return {
 		paths: categories.map((c) => {
-			return { params: { slug: c.slug } };
+			return { params: { slug: c.slug, name: c.name } };
 		}),
 		fallback: false,
 	};
 }
 
 export async function getStaticProps(context) {
+	const { meta: seo } = categories.find((c) => c.slug == context.params.slug);
+
 	return {
 		props: {
+			seo,
 			offsetList: 0,
 			cat: categories.sort((a, b) => 0.5 - Math.random()).slice(-6),
 		},

@@ -5,8 +5,9 @@ export const categories = [
 		slug: "auto-motorad",
 		searchPhrase: "tuning",
 		meta: {
-			title: "",
-			description: "",
+			title: "Die besten Preise für Auto- und Motorradteile - sheapr.com",
+			description:
+				"Auto & Motorrad Preisvergleich: Entdecken Sie Top-Angebote für Auto- und Motorradteile! Vergleichen Sie Preise, sparen Sie Zeit und Geld. Jetzt zugreifen!",
 		},
 		seo: "",
 	},
@@ -16,8 +17,9 @@ export const categories = [
 		slug: "computer-software",
 		searchPhrase: "laptop",
 		meta: {
-			title: "",
-			description: "",
+			title: "Die besten Preise für Computer & Software – sheapr.com",
+			description:
+				"Entdecken Sie den besten Computer und Software Preisvergleich! 💻🚀 Sparen Sie Zeit & Geld, indem Sie die günstigsten Angebote vergleichen. Jetzt zugreifen!",
 		},
 		seo: "",
 	},
@@ -27,8 +29,9 @@ export const categories = [
 		slug: "fotografie",
 		searchPhrase: "canon, sony",
 		meta: {
-			title: "",
-			description: "",
+			title: "Fotografie-Preisvergleich: die besten Produkte für Ihr Geld – sheapr.com",
+			description:
+				"Finde den besten Preis für deine Fotografie-Ausrüstung mit unserem Preisvergleicher Fotografie! Vergleiche Angebote und spare bares Geld. Jetzt ausprobieren!",
 		},
 		seo: "",
 	},
@@ -38,8 +41,9 @@ export const categories = [
 		slug: "handy-telefon",
 		searchPhrase: "smartphone",
 		meta: {
-			title: "",
-			description: "",
+			title: "Handy und Zubehör günstig kaufen – sheapr.com",
+			description:
+				"Entdecke den ultimativen Preisvergleicher für Smartphones und Handyzubehör! Spare Geld und finde die besten Deals auf einen Blick. Jetzt vergleichen & sparen!",
 		},
 		seo: "",
 	},
@@ -49,8 +53,9 @@ export const categories = [
 		slug: "heimwerken-garten",
 		searchPhrase: "trend",
 		meta: {
-			title: "",
-			description: "",
+			title: "Heimwerker aufgepasst: Hier findet ihr die besten Preise im Netz",
+			description:
+				"Entdecke die beste Preise für alle Heimwerker: Spare bei Werkzeugen, Materialien & Zubehör für Dein DIY-Projekt! Jetzt vergleichen & sparen!",
 		},
 		seo: "",
 	},
@@ -60,8 +65,9 @@ export const categories = [
 		slug: "mode-schuhe",
 		searchPhrase: "nike, adidas, ",
 		meta: {
-			title: "",
-			description: "",
+			title: "Mode und Accessoires zum Spitzenpreis: Unsere Top-Tipps",
+			description:
+				"Entdecke die besten Preise für Mode und Accessoires bei uns! Spare bei stylishen Outfits und trendigen Extras. Jetzt shoppen und sensationelle Angebote sichern!",
 		},
 		seo: "",
 	},
@@ -71,8 +77,9 @@ export const categories = [
 		slug: "sport-freizeit",
 		searchPhrase: "fitness outdoor",
 		meta: {
-			title: "",
-			description: "",
+			title: "Sparen beim Sport: Die besten Preise für Sport- und Freizeitartikel",
+			description:
+				"Entdecke den ultimativen Preisvergleich Sport und Freizeit! Spare jetzt bei Top-Angeboten für deine Lieblings-Aktivitäten. Jetzt vergleichen & sparen!",
 		},
 		seo: "",
 	},
@@ -82,8 +89,9 @@ export const categories = [
 		slug: "unterhaltungselektronik",
 		searchPhrase: "stream",
 		meta: {
-			title: "",
-			description: "",
+			title: "Die besten Preise für alle Elektronikartikel – sheapr.com",
+			description:
+				"Entdecke die besten Preise für alle Elektronikartikel! Günstig kaufen und sparen bei Top-Marken. Schnäppchenjäger aufgepasst: Jetzt zugreifen!",
 		},
 		seo: "",
 	},
@@ -93,8 +101,9 @@ export const categories = [
 		slug: "wohnen-lifestyle",
 		searchPhrase: "trend",
 		meta: {
-			title: "",
-			description: "",
+			title: "Preisvergleicher für Wohn und Lifestyle Produkte",
+			description:
+				"Entdecke die besten Schnäppchen mit unserem Preisvergleicher für Wohn & Lifestyle Produkte! Spare Zeit & Geld, finde Dein perfektes Zuhause. Jetzt vergleichen!",
 		},
 		seo: "",
 	},
