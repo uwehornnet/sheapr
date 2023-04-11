@@ -90,7 +90,7 @@ const FooterLayout = ({ children }) => {
 						<Link href="/imprint">Imprint</Link>
 					</li>
 					<li>
-						<Link href="/imprint">Privacy</Link>
+						<Link href="/privacy">Privacy</Link>
 					</li>
 				</ul>
 			</div>
