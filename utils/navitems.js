@@ -1,38 +1,18 @@
 export const navitems = [
 	{
-		slug: "",
-		name: "Beauty",
+		slug: "most-watched",
+		name: "Most watched",
 	},
 	{
-		slug: "",
-		name: "Beauty",
+		slug: "best-offers",
+		name: "Best offers",
 	},
 	{
-		slug: "",
-		name: "Beauty",
+		slug: "geschenkideen",
+		name: "Geschenkideen",
 	},
 	{
-		slug: "",
-		name: "Beauty",
-	},
-	{
-		slug: "",
-		name: "Beauty",
-	},
-	{
-		slug: "",
-		name: "Beauty",
-	},
-	{
-		slug: "",
-		name: "Beauty",
-	},
-	{
-		slug: "",
-		name: "Beauty",
-	},
-	{
-		slug: "",
-		name: "Beauty",
+		slug: "angebote",
+		name: "Angebote",
 	},
 ];

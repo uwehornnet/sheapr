@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
 import BannerGrid from "../components/BannerGrid";
