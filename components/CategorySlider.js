@@ -10,7 +10,7 @@ const CategorySlider = () => {
 					.map((c, i) => (
 						<li className={`block ${i == categories.length - 1 ? "pr-6" : null}`} key={i}>
 							<Link
-								href={`/category/${c.slug}`}
+								href={`/${c.slug}`}
 								className="bg-slate-100 rounded-sm p-4 w-full aspect-square min-w-[120px] lg:min-w-[160px] max-w-[120px] lg:max-w-[160px] flex flex-col items-center text-center justify-center"
 							>
 								<img
